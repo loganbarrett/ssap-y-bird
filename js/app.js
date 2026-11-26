@@ -973,7 +973,7 @@
       <p class="strong">This is a research study. Please read the
         <a href="${esc(DS.cfg.consentFile)}" target="_blank" rel="noopener">online consent form (opens in a new tab)</a>.</p>
       <label class="opt"><input type="checkbox" id="agree" name="agree">
-        <span>I have read the consent form and I agree to take part, including having my singing recorded.</span></label>
+        <span>I am 18 or older, I have read the consent form, and I agree to take part, including having my singing recorded.</span></label>
       ${manual ? `<h3>Participant number</h3>
         <p>Enter the number the researcher gave you. Your ID will be ${esc(DS.cfg.participantPrefix)}…</p>
         <input id="pnum" name="pnum" type="text" inputmode="numeric" autocomplete="off" maxlength="5" placeholder="e.g. 12"

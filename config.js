@@ -24,7 +24,7 @@ window.SSAP_CONFIG = {
   leaderboard: { enabled: true },
 
   consentFile: 'consent.html',     // the page the participant opens from the consent checkbox
-  consentVersion: 'SSAP-Online-Consent-2015-04-27',   // written into every data file; confirm this label, change it whenever the text changes
+  consentVersion: 'SSAP-Consent-IRB20261103-2026-11-26',   // written into every data file; confirm this label, change it whenever the text changes
   requireParticipantId: true,
 
   // Participant IDs look like SSAP-y_Bird_P001, numbered in the order people take part.
