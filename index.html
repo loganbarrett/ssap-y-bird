@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SSAP-y Bird</title>
+<meta name="description" content="Sing to fly. Echo, four-note and song games plus a pitch-hearing test, based on the Seattle Singing Accuracy Protocol from the Auditory Perception &amp; Action Lab at the University at Buffalo.">
+<link rel="stylesheet" href="css/app.css?v=20261126020503">
+</head>
+<body>
+<div class="wrap">
+  <header class="brand">
+    <div class="logos">
+      <img src="assets/apal-logo.jpg" alt="The Auditory Perception &amp; Action Lab" class="logo-apal">
+      <img src="assets/ub-logo.png" alt="University at Buffalo, The State University of New York" class="logo-ub">
+    </div>
+    <div class="title">
+      <h1>SSAP-y Bird</h1>
+      <p class="tag">Sing to fly</p>
+    </div>
+  </header>
+
+  <main class="stage" id="stage">
+    <canvas id="cv" aria-label="Game view"></canvas>
+    <div class="topbar">
+      <div class="tb-left">
+        <span id="rec" class="rec idle" role="status" aria-live="polite">
+          <i class="dot"></i><b id="rec-text">Microphone not in use</b>
+          <span class="vu" aria-hidden="true"><i id="vu"></i></span>
+        </span>
+        <span id="status" aria-live="polite"></span>
+      </div>
+      <div class="tb-right">
+        <button id="btn-help" class="mini" aria-haspopup="dialog">? Help</button>
+        <button id="btn-menu" class="mini" hidden>Menu</button>
+      </div>
+    </div>
+    <ol id="steps" class="steps" hidden aria-label="Steps">
+      <li data-s="1"><span>1</span> Listen</li><li data-s="2"><span>2</span> Sing</li><li data-s="3"><span>3</span> See how you did</li>
+    </ol>
+    <div class="callout" id="callout" aria-live="assertive"></div>
+    <div class="coach" id="coach" aria-live="polite"></div>
+    <div class="overlay" id="panel"></div>
+    <div class="overlay hidden" id="help" role="dialog" aria-modal="true" aria-label="Help"></div>
+  </main>
+
+  <footer class="foot">
+    <p id="privacy-line">Pitch is tracked with YIN, as in the original SSAP. Your audio is analysed live in your browser and is never recorded, uploaded or stored. Nothing is sent anywhere.</p>
+    <details class="about">
+      <summary>About, privacy and credits</summary>
+      <p><b>What is this?</b> A game version of the Seattle Singing Accuracy Protocol (SSAP), a set of short tests of how accurately people sing, developed by Peter Q. Pfordresher, Steven M. Demorest and colleagues. This version was made for The Auditory Perception &amp; Action Lab at the University at Buffalo.</p>
+      <p><b>Privacy.</b> Microphone audio is converted to a pitch number on your device and then discarded. Your results stay on this page; you can download them as a CSV file yourself. Your calibrated voice range, settings and best scores are kept in this browser only.</p>
+      <p><b>Accuracy.</b> A note counts as accurate when it is within 50 cents (half a semitone) of the target, the SSAP criterion. This game is for practice and fun; it is not a clinical or diagnostic test.</p>
+      <p><b>Method credits.</b> YIN: de Cheveign&eacute; &amp; Kawahara (2002), <i>Journal of the Acoustical Society of America</i> 111(4).</p>
+    </details>
+  </footer>
+</div>
+
+<script src="js/yin.js?v=20261126020503"></script>
+<script src="js/scoring.js?v=20261126020503"></script>
+<script src="js/staircase.js?v=20261126020503"></script>
+<script src="js/songs.js?v=20261126020503"></script>
+<script src="js/draw.js?v=20261126020503"></script>
+<script src="js/audio.js?v=20261126020503"></script>
+<script src="js/recorder.js?v=20261126020503"></script>
+<script src="js/input.js?v=20261126020503"></script>
+<script src="config.js?v=20261126020503"></script>
+<script src="js/datastore.js?v=20261126020503"></script>
+<script src="js/leaderboard.js?v=20261126020503"></script>
+<script src="js/app.js?v=20261126020503"></script>
+</body>
+</html>
